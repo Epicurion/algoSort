@@ -1,3 +1,9 @@
+//  This quick sort recursively takes two pointers, a start and an end.
+//  The end is the pivot. Then it creates two groups, less and more than the pivot.
+//  It returns the number of steps to sort the list.
+
+#include "algoSorts.h"
+
 void swap(int *a, int *b) {
 	int c = *a;
 	*a = *b;
