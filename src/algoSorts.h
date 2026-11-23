@@ -2,7 +2,9 @@
 #define ALGOSORTS
 
 int stupidSort(int *list, int size);
-int quickSort(int *list, int *pivot);
+int bubbleSort(int *list, int size);
 int selectionSort(int *list, int *end);
+int quickSort(int *list, int *pivot);
+
 
 #endif

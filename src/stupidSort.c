@@ -11,7 +11,7 @@ void swap(int *a, int *b) {
 }
 
 int ordered(int *list, int size) {
-	for (int index = 0; index < size; index++) {
+	for (int index = 0; index < size - 1; index++) {
 		if (list[index] > list[index + 1]) {
 			return 1;
 		}

@@ -10,22 +10,23 @@ void swap(int *a, int *b) {
 	*b = c;
 }
 
-int quickSort(int *list, int pivot) {
+int quickSort(int *list, int *pivot) {
 	int steps = 0;
 	if (list >= pivot) {
 		return 0;
 	}
-	int wall = list;
+	int *wall = list;
 
 	for (int *pointer = list; pointer < pivot; pointer++) {
 		if (*pointer <= *pivot) {
 			swap(pointer, wall);
+			wall++;
 			steps++;
 		}
 	}
 	swap(pivot, wall);
 
-	steps += quicksort (list, wall - 1);
-	steps += quicksort (wall + 1, pivot);
+	steps += quickSort(list, wall - 1);
+	steps += quickSort(wall + 1, pivot);
 	return steps;
 }
